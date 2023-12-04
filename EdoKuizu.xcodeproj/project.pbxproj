@@ -17,6 +17,7 @@
 		A12C7F932B16AD8F0010DD76 /* EdoKuizuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C7F922B16AD8F0010DD76 /* EdoKuizuUITests.swift */; };
 		A12C7F952B16AD8F0010DD76 /* EdoKuizuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C7F942B16AD8F0010DD76 /* EdoKuizuUITestsLaunchTests.swift */; };
 		A12C7FA42B17EC8A0010DD76 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C7FA32B17EC8A0010DD76 /* Quiz.swift */; };
+		A12C7FB42B1E985C0010DD76 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12C7FB32B1E985C0010DD76 /* QuizBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A12C7F922B16AD8F0010DD76 /* EdoKuizuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdoKuizuUITests.swift; sourceTree = "<group>"; };
 		A12C7F942B16AD8F0010DD76 /* EdoKuizuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdoKuizuUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A12C7FA32B17EC8A0010DD76 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		A12C7FB32B1E985C0010DD76 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +105,12 @@
 			children = (
 				A12C7F712B16AD8D0010DD76 /* AppDelegate.swift */,
 				A12C7F732B16AD8D0010DD76 /* SceneDelegate.swift */,
-				A12C7F752B16AD8D0010DD76 /* ViewController.swift */,
-				A12C7F772B16AD8D0010DD76 /* Main.storyboard */,
+				A12C7FB22B1E984B0010DD76 /* Model */,
+				A12C7FB52B1E98720010DD76 /* View */,
+				A12C7FB62B1E987B0010DD76 /* Controller */,
 				A12C7F7A2B16AD8E0010DD76 /* Assets.xcassets */,
 				A12C7F7C2B16AD8E0010DD76 /* LaunchScreen.storyboard */,
 				A12C7F7F2B16AD8E0010DD76 /* Info.plist */,
-				A12C7FA32B17EC8A0010DD76 /* Quiz.swift */,
 			);
 			path = EdoKuizu;
 			sourceTree = "<group>";
@@ -128,6 +130,31 @@
 				A12C7F942B16AD8F0010DD76 /* EdoKuizuUITestsLaunchTests.swift */,
 			);
 			path = EdoKuizuUITests;
+			sourceTree = "<group>";
+		};
+		A12C7FB22B1E984B0010DD76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A12C7FA32B17EC8A0010DD76 /* Quiz.swift */,
+				A12C7FB32B1E985C0010DD76 /* QuizBrain.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A12C7FB52B1E98720010DD76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A12C7F772B16AD8D0010DD76 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A12C7FB62B1E987B0010DD76 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A12C7F752B16AD8D0010DD76 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12C7FB42B1E985C0010DD76 /* QuizBrain.swift in Sources */,
 				A12C7F762B16AD8D0010DD76 /* ViewController.swift in Sources */,
 				A12C7F722B16AD8D0010DD76 /* AppDelegate.swift in Sources */,
 				A12C7FA42B17EC8A0010DD76 /* Quiz.swift in Sources */,
