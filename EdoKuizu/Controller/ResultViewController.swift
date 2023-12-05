@@ -19,7 +19,10 @@ class ResultViewController: UIViewController {
         scoreLabel.text = "Score: \(score)"
     }
     
-
+    @IBAction func backToQuiz(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

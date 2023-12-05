@@ -72,16 +72,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8m-MH-Zd7">
-                                <rect key="frame" x="20" y="424" width="374" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="292" translatesAutoresizingMaskIntoConstraints="NO" id="XMb-uG-PYc">
+                                <rect key="frame" x="25" y="0.0" width="364" height="786"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8m-MH-Zd7">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="414"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPy-0V-TNk">
+                                        <rect key="frame" x="0.0" y="706" width="364" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="65e-AX-JxG"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Back to Quiz">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                            <color key="baseForegroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backToQuiz:" destination="YY6-Th-IYZ" eventType="touchUpInside" id="HKi-xT-2tZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Xv-Gy-aP7"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="XMb-uG-PYc" firstAttribute="top" secondItem="7Xv-Gy-aP7" secondAttribute="top" id="AXl-Ye-x4M"/>
+                            <constraint firstItem="XMb-uG-PYc" firstAttribute="leading" secondItem="7Xv-Gy-aP7" secondAttribute="leading" constant="25" id="JFG-wt-ePj"/>
+                            <constraint firstItem="7Xv-Gy-aP7" firstAttribute="trailing" secondItem="XMb-uG-PYc" secondAttribute="trailing" constant="25" id="hga-Sb-dvF"/>
+                            <constraint firstItem="7Xv-Gy-aP7" firstAttribute="bottom" secondItem="XMb-uG-PYc" secondAttribute="bottom" constant="100" id="jet-BZ-uoK"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="scoreLabel" destination="V8m-MH-Zd7" id="ddl-dA-A8n"/>
