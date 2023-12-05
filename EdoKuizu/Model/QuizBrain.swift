@@ -25,8 +25,9 @@ struct QuizBrain {
     var score = 0
     
     mutating func checkAnswer(answer: String) {
-        let result = answer == quizzes[quizNumber].answer
-        if (result) { score += 1 }
+        if (answer == quizzes[quizNumber].answer) {
+            score += 1
+        }
     }
     
     func getQuestionText() -> String {
