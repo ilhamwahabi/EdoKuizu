@@ -22,20 +22,28 @@ struct QuizBrain {
     ]
     
     var quizNumber = 0
+    var score = 0
     
-    func checkAnswer(answer: String) -> Bool {
-        return answer == self.quizzes[self.quizNumber].answer
+    mutating func checkAnswer(answer: String) {
+        let result = answer == quizzes[quizNumber].answer
+        if (result) { score += 1 }
     }
     
     func getQuestionText() -> String {
-        return self.quizzes[self.quizNumber].question
+        return quizzes[quizNumber].question
     }
     
-    mutating func nextQuiz() {
+    func getScore() -> Int {
+        return score
+    }
+    
+    mutating func nextQuiz() -> Int {
         if (self.quizNumber < self.quizzes.count - 1) {
             self.quizNumber += 1
         } else {
             self.quizNumber = 0
         }
+        
+        return quizNumber
     }
 }
