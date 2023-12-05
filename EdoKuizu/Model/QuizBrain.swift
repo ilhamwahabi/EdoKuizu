@@ -41,6 +41,10 @@ struct QuizBrain {
     var quizNumber = 0
     var score = 0
     
+    mutating func randomizeQuizzes() {
+        quizzes = allQuizzes.shuffled().prefix(upTo: 10)
+    }
+    
     mutating func checkAnswer(answer: String) {
         if (answer == quizzes[quizNumber].answer) {
             score += 1

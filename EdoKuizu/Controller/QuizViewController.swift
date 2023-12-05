@@ -27,6 +27,7 @@ class QuizViewController: UIViewController {
         let quizNumber = quizBrain.nextQuiz()
         if (quizNumber == 0) {
             self.performSegue(withIdentifier: "goToResult", sender: self)
+            quizBrain.randomizeQuizzes()
         }
         
         self.questionLabel.text = quizBrain.getQuestionText()
